@@ -57,7 +57,9 @@ function App() {
     <div className="App">
       <Switch> 
         <Route exact path="/"> 
-          <Layout>
+          <Layout 
+            handleLogout={handleLogout}
+            currentUser={currentUser}>
             <Home
               currentUser={currentUser}
               />
