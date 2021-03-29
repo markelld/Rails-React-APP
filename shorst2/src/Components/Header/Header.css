@@ -1,10 +1,12 @@
 .header{
-  color: black;
+  color: #272932;
   font-weight: 700; 
   height:60px;  
-  margin-bottom: 90px;
+  margin-bottom: 90px; 
+  background-color: #FFA630;
   } 
   a.nav.link{
-    color: black;
-    font-weight: 700;
+    color: #272932;
+    font-weight: 700; 
+    text-decoration: none;
   } 

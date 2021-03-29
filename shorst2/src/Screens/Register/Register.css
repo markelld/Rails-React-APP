@@ -1,0 +1,37 @@
+.register-form{
+  display:flex;  
+  flex-direction: column;
+  justify-content:center; 
+  align-items: center; 
+  width: 100%; 
+  height:100vh;  
+  background-color: #F9F9F9;
+} 
+
+.registerform-container{
+  height: 75%; 
+  width: 40%; 
+  padding:30px;  
+  background-color: #F9F9F9;
+} 
+
+.login-link{
+  color:#151514; 
+  margin-top: 25px;
+} 
+
+.register-button {
+  margin:10px; 
+  font-size: 20px; 
+  color: #151514 ;
+} 
+
+@media screen and (max-width: 900px) {
+  .registerform-container{
+    height: 70%; 
+    width: 80%; 
+    padding:40px;  
+    background-color: #F9F9F9;  
+  
+  } 
+}

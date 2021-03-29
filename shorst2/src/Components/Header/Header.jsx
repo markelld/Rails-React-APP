@@ -8,11 +8,11 @@ const Header = (props) => {
   const { currentUser } = props; 
 
   return ( 
-    <Navbar collapseOnSelect bg="light" expand="lg" className='header'> 
+    <Navbar collapseOnSelect expand="lg" className='header'> 
       <LinkContainer to="/">
         <Navbar.Brand>Shaken or Stirred?</Navbar.Brand>
       </LinkContainer> 
-      <LinkContainer to="/post">
+      <LinkContainer to="/signin">
         <Nav.Link>Sign In</Nav.Link>
       </LinkContainer> 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

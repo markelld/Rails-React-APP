@@ -1,0 +1,45 @@
+.form-div{
+  display:flex;  
+  flex-direction: column;
+  justify-content:center; 
+  align-items: center; 
+  width: 100%; 
+  height:80vh;  
+  background-color: #8a8aac; 
+ 
+}
+.signin-container{
+  height: 55%; 
+  width: 50%; 
+  background-color: #787891 ;  
+
+} 
+/* .username{
+  margin: 10px; 
+} 
+.password{
+  margin-bottom: 10px;
+}  */
+/* 
+.signin-button{
+  margin:10px; 
+  font-size: 20px; 
+  border-radius: 5px; 
+  background-color: #151514; 
+  color: #F9F9F9 ;
+}  */
+
+.register-link{
+  color:#151514; 
+  margin-top: 25px;
+} 
+
+@media screen and (max-width: 900px) {
+  .signin-container{
+    height: 55%; 
+    width: 80%; 
+    padding:40px;  
+    background-color: #F9F9F9;  
+  
+  } 
+}
