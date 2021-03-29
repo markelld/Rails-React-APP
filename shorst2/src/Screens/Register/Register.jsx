@@ -22,8 +22,7 @@ function Register(props) {
   }
   
   
-  
-return (
+  return (
     <div>
       <Form onSubmit={(e) => {
       e.preventDefault();
