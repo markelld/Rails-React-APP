@@ -1,12 +1,14 @@
 import { Switch, Route, useHistory } from "react-router-dom";   
 import { useState, useEffect } from 'react'; 
-import { loginUser, registerUser, verifyUser, removeToken } from './Services/users';
+import { loginUser, registerUser, verifyUser, removeToken } from './Services/users'; 
+import { getCocktails, getOneCocktail, postCocktail, putCocktail, destroyCocktail } from './Services/Cocktails';
 
 
 import './App.css'; 
 import Home from "./Screens/Home/Home";
 import Register from "./Screens/Register/Register"; 
-import SignIn from "./Screens/SignIn/SignIn";
+import SignIn from "./Screens/SignIn/SignIn"; 
+import Post from "./Screens/Post/Post";
 import Layout from "./Components/Layout/Layout";
 
 
@@ -14,7 +16,8 @@ function App() {
 
   const [currentUser, setCurrentUser] = useState(null);  
   const [error, setError] = useState(null); 
-  const history = useHistory();
+  const history = useHistory();  
+  const [cocktails, setCocktails] = useState([]);
   
   useEffect(() => { 
     const handleVerify = async () => {
@@ -47,8 +50,26 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
-  }
+  }  
+
+  //cocktails 
+
+  useEffect(() => {
+    const fetchCocktails = async () => {
+      const cocktailList = await getCocktails(); 
+      setCocktails(cocktailList);
+    } 
+    fetchCocktails();
+  }, [])   
   
+  const handleCreate = async (cocktailData) => {
+    const newCocktail = await postCocktail(cocktailData); 
+    setCocktails(prevState => [...prevState, newCocktail]);
+  }
+
+
+
+
   
   
   
@@ -77,6 +98,16 @@ function App() {
           <SignIn
             handleLogin={handleLogin}
           />
+          </Layout>
+        </Route> 
+        <Route>
+          <Layout
+            currentUser={currentUser}
+          >
+            <Post  
+            currentUser={currentUser}
+            handleCreate={handleCreate}
+            />
           </Layout>
         </Route>
       </Switch>

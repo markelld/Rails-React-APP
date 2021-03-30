@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
-  const { currentUser } = props; 
+  const { currentUser, handleLogout } = props; 
 
   return ( 
     <Navbar collapseOnSelect expand="lg" className='header'> 
@@ -34,7 +34,7 @@ const Header = (props) => {
                 <Nav.Link>Post</Nav.Link>
               </LinkContainer>          
               <LinkContainer to="/">
-                <Nav.Link>Sign Out</Nav.Link>
+                <Nav.Link onClick={handleLogout} >Sign Out</Nav.Link>
               </LinkContainer> 
             </>
           }
