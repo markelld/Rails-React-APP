@@ -2,11 +2,14 @@
   color: #272932;
   font-weight: 700; 
   height:60px;  
-  margin-bottom: 90px; 
-  background-color: #FFA630;
+  /* margin-bottom:;  */
+  background-color: #FFA630; 
   } 
   a.nav.link{
     color: #272932;
     font-weight: 700; 
     text-decoration: none;
-  } 
+  }  
+  .mr-auto{
+    background-color: #FFA630; 
+  }

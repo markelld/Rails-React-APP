@@ -65,7 +65,22 @@ function App() {
   const handleCreate = async (cocktailData) => {
     const newCocktail = await postCocktail(cocktailData); 
     setCocktails(prevState => [...prevState, newCocktail]);
+  } 
+
+  const handleDelete = async (id) => {
+    await destroyCocktail(id); 
+    setCocktails(prevState => prevState.filter((cocktail) => cocktail.id !== id)) 
+    history.push('/main');
+  } 
+
+  const handleUpdate = async (id, formData) => {
+    const updateCocktail = await putCocktail(id, formData); 
+    setCocktails(prevState => prevState.map((cocktail) => {
+      return cocktail.id === Number(id) ? updateCocktail : cocktail
+    })); 
+    history.push("/")
   }
+
 
 
 

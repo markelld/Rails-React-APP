@@ -1,0 +1,26 @@
+.body{
+  display:flex; 
+  height: 100vh; 
+  width: 100%; 
+  flex-direction: column;
+}
+
+.search-block{
+  height:45%; 
+  width:100%; 
+  background-color: black;
+}  
+
+.random-cocktail{
+  height:45%; 
+  width:100%; 
+  background-color: #E08D79;
+} 
+
+.cocktail-search{
+  margin-top:50px;
+} 
+
+.random-button{
+  margin-top:50px;
+}
