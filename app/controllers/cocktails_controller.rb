@@ -21,7 +21,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktail_params) 
     @cocktail.user = @current_user
     if @cocktail.save
-      render json: @cocktail, status: :created, location: @cocktail
+      render json: @cocktail, include: :user, status: :created, location: @cocktail
     else
       render json: @cocktail.errors, status: :unprocessable_entity
     end
@@ -51,7 +51,7 @@ class CocktailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cocktail_params 
-      params.require(:cocktail).permit(:name, :variety, :ingredients, :build )
+      params.require(:cocktail).permit(:name, :variety, :ingredients, :build)
       # params.require(:cocktail).permit(:name, :type, :ingredients, :build, :user_id)
     end
 end
