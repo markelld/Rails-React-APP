@@ -16,7 +16,7 @@ User.destroy_all
 puts "#{User.count} users created" 
 
 markelldehaney = Cocktail.create(name: 'Old Cuban', variety: 'Shaken', ingredients: '1.5oz aged rum,.75oz lime,4 mint sprigs,.5oz Demerara ', build: 'Shake,Double strain > coupe,Top with prosecco,Mint leaf garnish', user: @markelldehaney) 
-# markelldehaney = Cocktail.create(name: '', variety: '', ingredients: '', build: '', user: @markelldehaney) 
+markelldehaney = Cocktail.create(name: 'Daiquiri', variety: 'Shaken', ingredients: '2oz Silver Rum .75oz lime .75oz simple syrup', build: 'Build in a shaker tin. Add ice and shake vigorously. Strain into a chilled coupe glass.', user: @markelldehaney) 
 
 puts "#{Cocktail.count} cocktails created"
 

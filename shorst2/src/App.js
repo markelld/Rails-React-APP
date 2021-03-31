@@ -57,10 +57,12 @@ function App() {
   useEffect(() => {
     const fetchCocktails = async () => {
       const cocktailList = await getCocktails(); 
-      setCocktails(cocktailList);
+      setCocktails(cocktailList); 
+      // console.log(cocktailList)
     } 
     fetchCocktails();
-  }, [])   
+  }, [])    
+ 
   
   const handleCreate = async (cocktailData) => {
     const newCocktail = await postCocktail(cocktailData); 
@@ -97,7 +99,8 @@ function App() {
             handleLogout={handleLogout}
             currentUser={currentUser}>
             <Home
-              currentUser={currentUser}
+              currentUser={currentUser} 
+              cocktails={cocktails}
               />
           </Layout>
         </Route> 
