@@ -19,7 +19,7 @@ function App() {
   const history = useHistory();  
   const [cocktails, setCocktails] = useState([]); 
   const [shaken, setShaken] = useState([]); 
-  // const [stirred, setStirred] = useState([]);
+  const [stirred, setStirred] = useState([]);
   
   useEffect(() => { 
     const handleVerify = async () => {
@@ -61,7 +61,8 @@ function App() {
       const cocktailList = await getCocktails(); 
       setCocktails(cocktailList); 
       // console.log(cocktailList)  
-      getShaken(cocktailList)
+      getShaken(cocktailList) 
+      getStirred(cocktailList)
     } 
     fetchCocktails();
   }, [])    
@@ -87,12 +88,16 @@ function App() {
   }
  // function for shaken button 
  const getShaken = (shakenData) => {
-   const shakenResults = cocktails.filter(cocktail => cocktails.variety === "Shaken") 
+   const shakenResults = cocktails.filter(cocktail => cocktail.variety === "Shaken") 
    setShaken(shakenResults)  
-   console.log(shakenData)
+   console.log(shakenResults)
 }
 
-
+  const getStirred = (stirredData) => { 
+  const stirredResults = cocktails.filter(cocktail => cocktail.variety === "Stirred") 
+    setStirred(stirredResults) 
+    console.log(stirredResults)
+}
 
   
   
