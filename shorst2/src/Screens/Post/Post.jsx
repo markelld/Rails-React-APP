@@ -20,7 +20,7 @@ function Post(props) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     const newPost = { [name]: value } 
-    setFormData(formData => {
+    setFormData(formData => { 
       return {...formData, ...newPost}
     })
   }
