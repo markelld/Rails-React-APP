@@ -1,7 +1,7 @@
 import { Switch, Route, useHistory } from "react-router-dom";   
 import { useState, useEffect } from 'react'; 
 import { loginUser, registerUser, verifyUser, removeToken } from './Services/users'; 
-import { getCocktails, getOneCocktail, postCocktail, putCocktail, destroyCocktail } from './Services/Cocktails';
+import { getCocktails, postCocktail, putCocktail, destroyCocktail } from './Services/Cocktails';
 
 
 import './App.css'; 
@@ -92,13 +92,11 @@ function App() {
  const getShaken = (shakenData) => {
    const shakenResults = cocktails.filter(cocktail => cocktail.variety === "Shaken") 
    setShaken(shakenResults)  
-   console.log(shakenResults)
 }
 
   const getStirred = (stirredData) => { 
   const stirredResults = cocktails.filter(cocktail => cocktail.variety === "Stirred") 
     setStirred(stirredResults) 
-    console.log(stirredResults)
 }
 
   
@@ -164,8 +162,8 @@ function App() {
           <Layout currentUser={currentUser}>
             <CocktailDetails
               currentUser={currentUser}
-              cocktails={cocktails}
               handleDelete={handleDelete}
+              cocktails={cocktails} 
             />
           </Layout>
         </Route>
