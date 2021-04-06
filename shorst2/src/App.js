@@ -10,7 +10,9 @@ import Register from "./Screens/Register/Register";
 import SignIn from "./Screens/SignIn/SignIn"; 
 import Post from "./Screens/Post/Post";
 import Layout from "./Components/Layout/Layout";
-
+import Shaken from "./Screens/Shaken/Shaken";
+import Stirred from "./Screens/Stirred/Stirred";
+import CocktailDetails from "./Screens/CocktailDetails/CocktailDetails";
 
 function App() { 
 
@@ -114,7 +116,7 @@ function App() {
               currentUser={currentUser} 
               cocktails={cocktails}  
               getShaken={getShaken}
-
+              getStirred={getStirred}
               />
           </Layout>
         </Route> 
@@ -132,13 +134,38 @@ function App() {
           />
           </Layout>
         </Route> 
-        <Route>
+        <Route exact path="/post">
           <Layout
             currentUser={currentUser}
           >
             <Post  
             currentUser={currentUser}
             handleCreate={handleCreate}
+            />
+          </Layout>
+        </Route>
+        <Route exact path="/shaken">
+          <Layout currentUser={currentUser} >
+            <Shaken
+              shaken={shaken}
+              setShaken={setShaken}
+            />
+          </Layout>
+        </Route>
+        <Route exact path="/stirred">
+          <Layout currentUser={currentUser} >
+            <Stirred
+              stirred={stirred}
+              setStirred={setStirred}
+            />
+          </Layout>
+        </Route>
+        <Route exact path="/cocktaildetails/:id">
+          <Layout currentUser={currentUser}>
+            <CocktailDetails
+              currentUser={currentUser}
+              cocktails={cocktails}
+              handleDelete={handleDelete}
             />
           </Layout>
         </Route>
@@ -151,3 +178,5 @@ function App() {
             
 
 export default App;
+       
+

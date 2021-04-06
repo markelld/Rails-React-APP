@@ -2,7 +2,7 @@ import "./Home.css"
 import { Link } from "react-router-dom";
 function Home(props) {
   
-  const { cocktails, currentUser } = props; 
+  const { cocktails, currentUser, getShaken, getStirred } = props; 
   //search function
   
   //random function 
@@ -15,12 +15,15 @@ function Home(props) {
           className="cocktail-search"
         />  
         <div> 
-          <Link to="/">
-            <button className="shaken-button">Shaken</button> 
-          </Link> 
-          <Link to="/">
-            <button className="stirred-button">Stirred</button>
-          </Link>
+         
+            <button className="shaken-button"
+            onClick={() => props.getShaken()}
+            ><Link to="/shaken">Shaken</Link></button>
+         
+       
+          <button className="stirred-button"
+            onClick={( ) => props.getStirred()}
+          ><Link to="/stirred">Stirred</Link></button>
         </div>
       </div> 
       <div className="random-cocktail"> 
@@ -32,6 +35,7 @@ function Home(props) {
 } 
 
 export default Home;
+        
 
 
         
