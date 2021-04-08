@@ -1,12 +1,16 @@
 import "./Home.css"
 import { Link } from "react-router-dom";
+
+
+
+
 function Home(props) {
   
   const { cocktails, currentUser, getShaken, getStirred } = props; 
   //search function
   
   //random function 
-
+  
   return (
     <div className="body">
       <div className="search-block">  

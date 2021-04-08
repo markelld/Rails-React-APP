@@ -7,7 +7,10 @@ import { getOneCocktail } from "../../Services/Cocktails";
 function CocktailDetails(props) {
   const { cocktailItem, setCocktailItem } = useState(null);
   const { id } = useParams();
-  const { currentUser, handleDelete, cocktails } = props;
+  const { currentUser, handleDelete, cocktails} = props;
+  
+  const cocktail = cocktails.find(cocktail => cocktail.id == id)
+  console.log(cocktail)
   // useEffect(() => {
   //   const fetchCocktailRecipe = async () => {
   //     const cocktailData = await getOneCocktail(id);
@@ -17,11 +20,12 @@ function CocktailDetails(props) {
   //   }
   //   fetchCocktailRecipe();
   // },[id])
+  // console.log(setCocktailItem)
   
   return (
     <div>
       <div className="recipe-div">
-        <h1>name</h1>
+        <h1>{cocktail.name}</h1>
       </div>
       <div className="reviews">
 
