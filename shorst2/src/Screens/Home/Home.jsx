@@ -1,15 +1,22 @@
 import "./Home.css"
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 
 
 
 function Home(props) {
   
-  const { cocktails, currentUser, getShaken, getStirred } = props; 
+  // const { randomCocktail, setRandomCocktail } = useState([]);
+  const { cocktails, currentUser, getShaken, getStirred } = props;
   //search function
   
-  //random function 
+  //random function  
+  // const getRandomCocktail = (randomCocktail) => {
+  //   const result = cocktails.Math.floor(Math.random() * cocktails.id)
+  //   getRandomCocktail(result)
+  //   console.log(result)
+  // }
   
   return (
     <div className="body">

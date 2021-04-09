@@ -2,6 +2,8 @@ import "./CocktailDetails.css"
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getOneCocktail } from "../../Services/Cocktails";
+import Button from "react-bootstrap/Button";
+import Card from 'react-bootstrap/Card';
 
 
 function CocktailDetails(props) {
@@ -25,15 +27,38 @@ function CocktailDetails(props) {
   return (
     <div>
       <div className="recipe-div">
-        <h1>{cocktail.name}</h1>
+        <Card style={{ width: '18rem' }}>
+          <Card.Body>
+            <Card.Title>
+              {cocktail.name}
+            </Card.Title>
+            <br/>
+            <Card.Subtitle className="mb-2 text-muted">Ingredients</Card.Subtitle>
+            <Card.Text>
+              {cocktail.ingredients}
+            </Card.Text>  
+            <br/> 
+            <Card.Subtitle className="mb-2 text-muted">Build</Card.Subtitle>
+            <Card.Text>
+              {cocktail.build}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+      <div className="button-div">
+          <Button className="delete-button">delete</Button>
+        <Link to={`/update/${cocktail.id}`}>
+          <Button className="edit-button">edit</Button>
+        </Link>
       </div>
       <div className="reviews">
-
       </div>
     </div>
   )
 } 
 export default CocktailDetails;
+
+        
    
   
     

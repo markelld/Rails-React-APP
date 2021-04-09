@@ -13,6 +13,7 @@ import Layout from "./Components/Layout/Layout";
 import Shaken from "./Screens/Shaken/Shaken";
 import Stirred from "./Screens/Stirred/Stirred";
 import CocktailDetails from "./Screens/CocktailDetails/CocktailDetails";
+import Update from "./Screens/Update/Update";
 
 function App() { 
 
@@ -164,6 +165,13 @@ function App() {
               currentUser={currentUser}
               handleDelete={handleDelete}
               cocktails={cocktails} 
+            />
+          </Layout>
+        </Route>
+        <Route to="/update/:id">
+          <Layout currentUser={currentUser}>
+            <Update
+
             />
           </Layout>
         </Route>
