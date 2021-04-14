@@ -112,7 +112,7 @@ function App() {
   }
   
   const searchFilter = (value, cocktails) => {
-    const resultsSearch = cocktails.filter(cocktail => cocktail.name.toLowercase().includes(value.toLowercase()))
+    const resultsSearch = cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(value.toLowerCase()))
     
     setSearchResults(resultsSearch)
   }

@@ -13,7 +13,7 @@ function Home(props) {
   // const [searchResults, setSearchResults] = useState([]);
   // const [search, setSearch] = useState("");
   // const { randomCocktail, setRandomCocktail } = useState([]);
-  const { cocktails, currentUser, getShaken, getStirred } = props;
+  const { cocktails, currentUser, getShaken, getStirred, search, searchResults, handleChange } = props;
   
   //search function
   // searchHandleChange = (e) => {
@@ -45,12 +45,17 @@ function Home(props) {
           type="text"
           placeholder="Search" 
           className="cocktail-search"
-          // value={search} 
+          value={search} 
           name="search"
-          // onChange={(e) => props.handleChange(e)}
+          onChange={(e) => props.handleChange(e)}
           
         />
         <button>search</button>
+        {searchResults && searchResults.map((cocktail, index) => {
+          return (
+            <div key={index}>
+              <Link to={`/cocktaildetails/${cocktail.id}`}><h1>{cocktail.name}</h1></Link></div>
+          )})}
         {/* <div className="cocktail-button">
           <div className="shaken-div">
             <button className="shaken-button"
