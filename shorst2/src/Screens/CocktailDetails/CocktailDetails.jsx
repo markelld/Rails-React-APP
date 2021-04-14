@@ -27,7 +27,7 @@ function CocktailDetails(props) {
   return (
     <div>
       <div className="recipe-div">
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '22rem' }}>
           <Card.Body>
             <Card.Title>
               {cocktail.name}
@@ -42,15 +42,19 @@ function CocktailDetails(props) {
             <Card.Text>
               {cocktail.build}
             </Card.Text>
+              <Button className="delete-button">delete</Button>
+                <Link to={`/update/${cocktail.id}`}>
+                  <Button className="edit-button">edit</Button>
+                </Link>
           </Card.Body>
         </Card>
       </div>
-      <div className="button-div">
+      {/* <div className="button-div">
           <Button className="delete-button">delete</Button>
         <Link to={`/update/${cocktail.id}`}>
           <Button className="edit-button">edit</Button>
         </Link>
-      </div>
+      </div> */}
       <div className="reviews">
       </div>
     </div>

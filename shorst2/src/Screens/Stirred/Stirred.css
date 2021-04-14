@@ -1,0 +1,9 @@
+.listgroup{
+  width:70%;
+}
+
+.list-div{ 
+  display:flex; 
+  justify-content: center; 
+  width:100%;
+}

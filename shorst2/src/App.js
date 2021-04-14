@@ -23,6 +23,8 @@ function App() {
   const [cocktails, setCocktails] = useState([]); 
   const [shaken, setShaken] = useState([]); 
   const [stirred, setStirred] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [search, setSearch] = useState("");
   
   useEffect(() => { 
     const handleVerify = async () => {
@@ -98,8 +100,22 @@ function App() {
   const getStirred = (stirredData) => { 
   const stirredResults = cocktails.filter(cocktail => cocktail.variety === "Stirred") 
     setStirred(stirredResults) 
-}
-
+  }
+  //searchfilter 
+  const handleChange = (e) => {
+    setSearch(e.target.value)
+    
+    if (e.target.value) {
+      let value = e.target.value
+      searchFilter(value,cocktails)
+    }
+  }
+  
+  const searchFilter = (value, cocktails) => {
+    const resultsSearch = cocktails.filter(cocktail => cocktail.name.toLowercase().includes(value.toLowercase()))
+    
+    setSearchResults(resultsSearch)
+  }
   
   
   
@@ -116,6 +132,9 @@ function App() {
               cocktails={cocktails}  
               getShaken={getShaken}
               getStirred={getStirred}
+              search={search}  
+              searchResults={searchResults}
+              handleChange={handleChange}
               />
           </Layout>
         </Route> 

@@ -7,8 +7,8 @@ function Shaken(props) {
   const { shaken, setShaken } = props
   
   return (
-    <div>
-      {shaken && <ListGroup>
+    <div className="list-div">
+      {shaken && <ListGroup className="listgroup">
         {shaken.map((cocktail) => {
           return (<Link key={cocktail.id} to={`/cocktaildetails/${cocktail.id}`}>
           <ListGroup.Item>{cocktail.name}</ListGroup.Item></Link>)

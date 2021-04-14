@@ -7,8 +7,8 @@ function Stirred(props) {
   const { stirred, setStirred } = props;
   
   return (
-  <div>
-    {stirred && <ListGroup>
+  <div className="list-div">
+    {stirred && <ListGroup className="listgroup">
       {stirred.map((cocktail) => {
         return (<Link key={cocktail.id} to={`/cocktaildetails/${cocktail.id}`}>
         <ListGroup.Item>{cocktail.name}</ListGroup.Item></Link>)

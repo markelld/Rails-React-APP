@@ -27,14 +27,14 @@ function Post(props) {
   
   
   return (
-    <div> 
-      <div className="newpost-form"> 
-        <Form className="postform-edit"
+        <Form
           onSubmit={(e) => {
             e.preventDefault(); 
             handleCreate(formData); 
             history.push('/');
           }}> 
+        <div className="newpost-div"> 
+          <div className="postform-container"> 
           <Form.Group> 
             <Form.Control
               type="text" 
@@ -61,7 +61,10 @@ function Post(props) {
               name="ingredients" 
               placeholder="ingredients" 
               value={ingredients} 
-              onChange={handleChange} 
+              onChange={handleChange}
+              as="textarea"
+              cols={35}
+              rows={3}
               required
             /> 
           </Form.Group>  
@@ -72,15 +75,20 @@ function Post(props) {
               name="build" 
               placeholder="build" 
               value={build} 
-              onChange={handleChange} 
+              onChange={handleChange}
+              as="textarea"
+              cols={35}
+              rows={3}
               required
             />
           </Form.Group> 
           <br /> 
-          <button>go</button>
+          <button
+            className="post-button"
+          >submit</button>
+          </div>
+          </div>
         </Form> 
-      </div>
-    </div>
   )
 } 
 
