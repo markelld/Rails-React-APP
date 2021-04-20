@@ -68,7 +68,6 @@ function Post(props) {
               required
             /> 
           </Form.Group>  
-          <br />
           <Form.Group> 
             <Form.Control
               type="text" 
