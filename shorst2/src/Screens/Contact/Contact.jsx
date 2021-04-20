@@ -1,5 +1,5 @@
 import "./Contact.css";
-import Form from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import swal from "sweetalert2";
 import emailjs from "emailjs-com";
@@ -17,7 +17,7 @@ const Contact = () => {
             required
           />
         </Form.Group>
-        <br />
+        {/* <br /> */}
         <Form.Group>
           <Form.Control
             name="user_email"
@@ -26,7 +26,7 @@ const Contact = () => {
             required
           />
         </Form.Group>
-        <br />
+        {/* <br /> */}
         <Form.Group>
           <Form.Control
             name="user_message"
@@ -40,7 +40,6 @@ const Contact = () => {
         <div className="contactbutton-div">
           <Button
             type="submit"
-            variant="danger"
             size="lg"
           >Submit
           </Button>

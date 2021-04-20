@@ -14,7 +14,7 @@ const Header = (props) => {
       </LinkContainer> 
       <LinkContainer to="/signin">
         <Nav.Link>Sign In</Nav.Link>
-      </LinkContainer> 
+      </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">  
@@ -35,7 +35,10 @@ const Header = (props) => {
               </LinkContainer>          
               <LinkContainer to="/">
                 <Nav.Link onClick={handleLogout} >Sign Out</Nav.Link>
-              </LinkContainer> 
+              </LinkContainer>
+              <LinkContainer to="/contact">
+                <Nav.Link>Contact</Nav.Link>
+              </LinkContainer>
             </>
           }
         </Nav>

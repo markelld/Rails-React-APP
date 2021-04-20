@@ -198,9 +198,11 @@ function App() {
             />
           </Layout>
         </Route>
-        <Route to="/contact">
-          <Layout>
-            <Contact/>
+        <Route exact path="/contact">
+          <Layout currentUser={currentUser}>
+            <Contact
+              currentUser={currentUser}
+            />
           </Layout>
         </Route>
       </Switch>
