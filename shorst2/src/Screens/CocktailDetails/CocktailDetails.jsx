@@ -2,7 +2,7 @@ import "./CocktailDetails.css"
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getOneCocktail } from "../../Services/Cocktails";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Card from 'react-bootstrap/Card';
 
 
@@ -42,9 +42,9 @@ function CocktailDetails(props) {
             <Card.Text>
               {cocktail.build}
             </Card.Text>
-              <Button className="delete-button">delete</Button>
+              <button className="delete-button">delete</button>
                 <Link to={`/update/${cocktail.id}`}>
-                  <Button className="edit-button">edit</Button>
+                  <button className="edit-button">edit</button>
                 </Link>
           </Card.Body>
         </Card>

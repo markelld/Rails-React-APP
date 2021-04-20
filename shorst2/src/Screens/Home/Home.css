@@ -9,9 +9,10 @@
 
 .search-block{ 
   /* flex-direction: row; */
-  height:45%; 
+  height:50%; 
   width:90%; 
-  background-color: black; 
+  background-color: black;  
+  margin-top: 20px;
 }  
 
 .random-cocktail{

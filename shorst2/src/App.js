@@ -14,8 +14,10 @@ import Shaken from "./Screens/Shaken/Shaken";
 import Stirred from "./Screens/Stirred/Stirred";
 import CocktailDetails from "./Screens/CocktailDetails/CocktailDetails";
 import Update from "./Screens/Update/Update";
+import Contact from "./Screens/Contact/Contact"; 
 
-function App() { 
+
+function App() {
 
   const [currentUser, setCurrentUser] = useState(null);  
   const [error, setError] = useState(null); 
@@ -187,11 +189,18 @@ function App() {
             />
           </Layout>
         </Route>
-        <Route to="/update/:id">
+        <Route exact path="/update/:id">
           <Layout currentUser={currentUser}>
             <Update
-
+              cocktails={cocktails}
+              handleUpdate={handleUpdate}
+              currentUser={currentUser}
             />
+          </Layout>
+        </Route>
+        <Route to="/contact">
+          <Layout>
+            <Contact/>
           </Layout>
         </Route>
       </Switch>

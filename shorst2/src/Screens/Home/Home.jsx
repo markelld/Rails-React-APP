@@ -54,7 +54,7 @@ function Home(props) {
         {searchResults && searchResults.map((cocktail, index) => {
           return (
             <div key={index}>
-              <Link to={`/cocktaildetails/${cocktail.id}`}><h1>{cocktail.name}</h1></Link></div>
+              <Link to={`/cocktaildetails/${cocktail.id}`}><h4>{cocktail.name}</h4>d</Link></div>
           )})}
         {/* <div className="cocktail-button">
           <div className="shaken-div">

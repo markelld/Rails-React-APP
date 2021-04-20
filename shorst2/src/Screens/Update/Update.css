@@ -1,0 +1,15 @@
+.parent-div{
+  display:flex;  
+  flex-direction: column;
+  justify-content:center; 
+  align-items: center; 
+  width: 100%; 
+} 
+
+.editform-container{
+  width: 60%;  
+  padding:40px; 
+  background-color: #787891  ; 
+  margin-top:70px;  
+} 
+
