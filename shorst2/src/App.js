@@ -26,6 +26,7 @@ function App() {
   const [shaken, setShaken] = useState([]); 
   const [stirred, setStirred] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
+  const [randomResults, setRandomResults] = useState([]);
   const [search, setSearch] = useState("");
   
   useEffect(() => { 
@@ -118,7 +119,18 @@ function App() {
     
     setSearchResults(resultsSearch)
   }
-  
+  ///random cocktail
+
+    // const resultCocktail = cocktails[Math.floor(Math.random() * cocktails.length)]
+    // console.log(resultCocktail)
+    // setRandomResults(resultCocktail)
+
+  const randomCocktail = (cocktails) => {
+    const resultCocktail = cocktails[Math.floor(Math.random() * cocktails.length)]
+    console.log(resultCocktail)
+    setRandomResults(resultCocktail)
+  }
+ 
   
   
   
@@ -137,6 +149,8 @@ function App() {
               search={search}  
               searchResults={searchResults}
               handleChange={handleChange}
+              randomCocktail={randomCocktail}
+              randomResults={randomResults}
               />
           </Layout>
         </Route> 
@@ -194,7 +208,7 @@ function App() {
             <Update
               cocktails={cocktails}
               handleUpdate={handleUpdate}
-              currentUser={currentUser}
+              currentUser={currentUser} 
             />
           </Layout>
         </Route>

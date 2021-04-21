@@ -13,7 +13,17 @@ function Home(props) {
   // const [searchResults, setSearchResults] = useState([]);
   // const [search, setSearch] = useState("");
   // const { randomCocktail, setRandomCocktail } = useState([]);
-  const { cocktails, currentUser, getShaken, getStirred, search, searchResults, handleChange } = props;
+  const {
+    cocktails,
+    currentUser,
+    getShaken,
+    getStirred,
+    search,
+    searchResults,
+    handleChange,
+    randomResults,
+    randomCocktail
+  } = props;
   
   //search function
   // searchHandleChange = (e) => {
@@ -53,9 +63,16 @@ function Home(props) {
         <button>search</button>
         {searchResults && searchResults.map((cocktail, index) => {
           return (
-            <div key={index}>
-              <Link to={`/cocktaildetails/${cocktail.id}`}><h4>{cocktail.name}</h4>d</Link></div>
+            <div key={index} className="result-div">
+              <Link to={`/cocktaildetails/${cocktail.id}`}><h4>{cocktail.name}</h4></Link></div>
           )})}
+         
+        {/* {randomResults && randomResults.map((cocktail, index) => {
+          return (
+            <div key={index} className="random-cocktail">
+              <Link to={`/cocktaildetails/${cocktail.id}`}><h4>{cocktail.name}</h4></Link></div>
+          )
+        })} */}
         {/* <div className="cocktail-button">
           <div className="shaken-div">
             <button className="shaken-button"
@@ -76,7 +93,15 @@ function Home(props) {
             ><Link to="/shaken">Shaken</Link></button>
         </div>  
         <div className="randomdiv-2">
-          <button className="random-button">random recipe</button>
+          <button className="random-button"
+            onClick={() => props.randomCocktail()}
+          >random recipe</button>
+            {randomResults && randomResults.map((cocktail, index) => {
+          return (
+            <div key={index} className="random-cocktail">
+              <Link to={`/cocktaildetails/${cocktail.id}`}><h4>{cocktail.name}</h4></Link></div>
+          )
+        })}
         </div>
         <div className="stirreddiv-3">
             <button className="stirred-button"

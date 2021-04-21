@@ -42,7 +42,8 @@ function CocktailDetails(props) {
             <Card.Text>
               {cocktail.build}
             </Card.Text>
-              <button className="delete-button">delete</button>
+            <button onClick={() => handleDelete(cocktailItem.id)}
+              className="delete-button">delete</button>
                 <Link to={`/update/${cocktail.id}`}>
                   <button className="edit-button">edit</button>
                 </Link>
