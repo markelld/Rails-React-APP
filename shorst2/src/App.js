@@ -124,8 +124,9 @@ function App() {
     // const resultCocktail = cocktails[Math.floor(Math.random() * cocktails.length)]
     // console.log(resultCocktail)
     // setRandomResults(resultCocktail)
-
-  const randomCocktail = (cocktails) => {
+ 
+  const randomCocktail = (cocktails,length) => {
+    console.log(cocktails)
     const resultCocktail = cocktails[Math.floor(Math.random() * cocktails.length)]
     console.log(resultCocktail)
     setRandomResults(resultCocktail)
@@ -149,7 +150,7 @@ function App() {
               search={search}  
               searchResults={searchResults}
               handleChange={handleChange}
-              randomCocktail={randomCocktail}
+              // randomCocktail={randomCocktail}
               randomResults={randomResults}
               />
           </Layout>

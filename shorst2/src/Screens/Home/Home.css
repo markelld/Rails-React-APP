@@ -20,7 +20,7 @@
   width:100%;  
   margin-top:50px; 
   margin-bottom: 60px;
-  background-color: #E08D79; 
+  background-color: #FFFFFF; 
   display:flex; 
   flex-direction: row; 
   justify-content: space-evenly; 
@@ -54,21 +54,21 @@
 
 .shakendiv-1{
   height:425px;  
-  width:300px; 
-  background-color:white; 
+  width:370px; 
+  background-color:black; 
   margin:20px;
 } 
 
 .randomdiv-2{
   height:425px;  
-  width:300px; 
+  width:370px; 
   background-color:black; 
   margin:20px;
 } 
 
 .stirreddiv-3{
   height:425px;  
-  width:300px; 
+  width:370px; 
   background-color:black; 
   margin:20px;  
 } 

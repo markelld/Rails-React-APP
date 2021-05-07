@@ -26,3 +26,14 @@ puts "#{Review.count} reviews created"
 
 
 
+def fix_spelling(name)
+  if name != "Twitter"
+    name = "Twitter"
+  end   
+  name
+end 
+
+def fix_spelling(name) 
+  name != "Twitter" "Twitter" : name
+end
+
