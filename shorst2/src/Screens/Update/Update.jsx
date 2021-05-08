@@ -21,13 +21,13 @@ function Update(props) {
   useEffect(() => {
     const prefillFormData = () => {
       const cocktailItem = cocktails.find((cocktail) => cocktail.id === Number(id));
-      // console.log(cocktailItem)
+      console.log(cocktailItem)
       // debugger
       setFormData({
-        // name: cocktailItem.name,
-        // variety: cocktailItem.variety,
-        // ingredients: cocktailItem.ingredients,
-        // build: cocktailItem.ingredients
+        name: cocktailItem.name,
+        variety: cocktailItem.variety,
+        ingredients: cocktailItem.ingredients,
+        build: cocktailItem.ingredients
       }); 
       
     }
