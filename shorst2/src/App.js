@@ -84,7 +84,7 @@ function App() {
   const handleDelete = async (id) => {
     await destroyCocktail(id); 
     setCocktails(prevState => prevState.filter((cocktail) => cocktail.id !== id)) 
-    history.push('/main');
+    history.push('/');
   } 
 
   const handleUpdate = async (id, formData) => {

@@ -9,10 +9,11 @@
 } 
 
 .registerform-container{
-  height: 75%; 
-  width: 40%; 
+  height: 50%; 
+  width: 60%; 
   padding:30px;  
-  background-color: #F9F9F9;
+  background-color: #89a0e6; 
+  border-radius:10px;
 } 
 
 .login-link{

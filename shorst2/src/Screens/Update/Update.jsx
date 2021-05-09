@@ -2,7 +2,7 @@ import "./Update.css"
 import { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button"; 
 
 function Update(props) {
   
@@ -83,7 +83,7 @@ function Update(props) {
               onChange={handleChange}
               as="textarea"
               cols={35}
-              rows={3}
+              rows={4}
               required
             />
           </Form.Group>
@@ -95,13 +95,13 @@ function Update(props) {
               value={build}
               onChange={handleChange}
               as="textarea"
-              cols={35}
-              rows={3}
+              cols={38}
+              rows={4}
               required
             />
           </Form.Group>
           <br />
-          <Button className="editpost-button">Post</Button>
+          <button className="editpost-button">Post</button>
         </div>
       </div>
     </Form>

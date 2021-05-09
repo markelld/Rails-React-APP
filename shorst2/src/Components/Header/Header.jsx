@@ -33,11 +33,11 @@ const Header = (props) => {
               <LinkContainer to="/post">
                 <Nav.Link>Post</Nav.Link>
               </LinkContainer>          
-              <LinkContainer to="/">
-                <Nav.Link onClick={handleLogout} >Sign Out</Nav.Link>
-              </LinkContainer>
               <LinkContainer to="/contact">
                 <Nav.Link>Contact</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/">
+                <Nav.Link onClick={handleLogout} >Sign Out</Nav.Link>
               </LinkContainer>
             </>
           }
