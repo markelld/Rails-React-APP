@@ -60,7 +60,7 @@ function Home(props) {
           onChange={(e) => props.handleChange(e)}
           
         />
-        {/* <button>search</button> */}
+        <button>search</button>
         {searchResults && searchResults.map((cocktail, index) => {
           return (
             <div key={index} className="result-div">
@@ -87,15 +87,12 @@ function Home(props) {
         </div> */}
       </div> 
       <div className="random-cocktail">
-        <div className="shakendiv-1">
-            <button className="shaken-button"
-            onClick={() => props.getShaken()}
-            ><Link to="/shaken">Shaken</Link></button>
+        <div className="shakendiv-1"><Link to="/shaken"><button className="shaken-button"onClick={() => props.getShaken()}>Shaken</button></Link>
         </div>  
         <div className="randomdiv-2">
           <button className="random-button"
             onClick={() => props.randomCocktail()}
-          >random recipe</button>
+          >Random Recipe</button>
             {randomResults && randomResults.map((cocktail, index) => {
           return (
             <div key={index} className="random-cocktail">
@@ -104,9 +101,7 @@ function Home(props) {
         })}
         </div>
         <div className="stirreddiv-3">
-            <button className="stirred-button"
-              onClick={( ) => props.getStirred()}
-            ><Link to="/stirred">Stirred</Link></button>
+        <Link to="/stirred"><button className="stirred-button"onClick={( ) => props.getStirred()}>Stirred</button></Link>
         </div>
       </div>
     </div>

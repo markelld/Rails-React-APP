@@ -80,11 +80,9 @@ function Post(props) {
               rows={3}
               required
             />
+          <button className="post-button">submit</button>
           </Form.Group> 
           <br /> 
-          <button
-            className="post-button"
-          >submit</button>
           </div>
           </div>
         </Form> 
