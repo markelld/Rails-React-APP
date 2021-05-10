@@ -101,7 +101,7 @@ function Update(props) {
             />
           </Form.Group>
           <br />
-          <button className="editpost-button">Post</button>
+          <button className="editpost-button">Submit</button>
         </div>
       </div>
     </Form>
