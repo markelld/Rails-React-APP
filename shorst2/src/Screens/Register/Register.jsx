@@ -70,7 +70,7 @@ function Register(props) {
           </Form.Group>
           <br />
           <button className="register-button">Submit</button> 
-          <Link to="/">
+          <Link to="/signin">
             <h6 className="login-link">Already have an Account?</h6>
           </Link>
           </div>

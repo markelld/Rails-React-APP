@@ -8,9 +8,9 @@ const Header = (props) => {
   const { currentUser, handleLogout } = props; 
 
   return ( 
-    <Navbar collapseOnSelect expand="lg" className='header'> 
+    <Navbar collapseOnSelect expand="lg" className='header'>  
       <LinkContainer to="/">
-        <Navbar.Brand>Shaken or Stirred?</Navbar.Brand>
+        <Navbar.Brand>SS</Navbar.Brand>
       </LinkContainer> 
       <LinkContainer to="/signin">
         <Nav.Link>Sign In</Nav.Link>
