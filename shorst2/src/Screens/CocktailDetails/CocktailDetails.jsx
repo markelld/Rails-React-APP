@@ -25,9 +25,9 @@ function CocktailDetails(props) {
   // console.log(setCocktailItem)
   
   return (
-    <div>
-      <div className="recipe-div">
-        <Card style={{ width: '22rem' }}>
+    <div className="main-div">
+      {/* <div className="recipe-div"> */}
+        <Card  className="card" style={{ width: '22rem' }}>
           <Card.Body>
             <Card.Title>
               {cocktail.name}
@@ -49,7 +49,7 @@ function CocktailDetails(props) {
                 </Link>
           </Card.Body>
         </Card>
-      </div>
+      {/* </div> */}
       {/* <div className="button-div">
           <Button className="delete-button">delete</Button>
         <Link to={`/update/${cocktail.id}`}>

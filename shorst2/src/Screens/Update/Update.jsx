@@ -27,7 +27,7 @@ function Update(props) {
         name: cocktailItem.name,
         variety: cocktailItem.variety,
         ingredients: cocktailItem.ingredients,
-        build: cocktailItem.ingredients
+        build: cocktailItem.build
       }); 
       
     }
