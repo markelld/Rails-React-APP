@@ -76,8 +76,7 @@ function Home(props) {
         <div className="randomdiv-2">
           <button
             className="random-button"
-            onClick={() => randomCocktail()}>
-            Random Recipe
+            onClick={() => randomCocktail()}>Random Recipe
           </button>
           {randomResults &&
             randomResults.map((cocktail, index) => {

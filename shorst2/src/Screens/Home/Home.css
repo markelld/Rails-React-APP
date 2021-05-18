@@ -5,16 +5,22 @@
   height: 100%; 
   width: 100%; 
   flex-direction: column; 
-  color:#383D3B;
+  color:#383D3B; 
 }
 
 .search-block{ 
   /* flex-direction: row; */
   height:425px; 
   width:90%; 
-  background-color: black;  
+  /* background-color: black;   */
   margin-top: 20px; 
-  border-radius: 5px;
+  border-radius: 5px; 
+  background-image:url(./home.jpg); 
+  background-size:cover; 
+  background-repeat: no-repeat; 
+  background-position: right center; 
+  border-radius: 5px;  
+  border:solid 1px #383D3B;
 }  
 
 .random-cocktail{
@@ -168,7 +174,11 @@
 } */ 
 
 
-@media screen and (max-width: 1200px){ 
+@media screen and (max-width: 1200px){  
+  .cocktail-search{
+    margin-top:50px; 
+    width: 60%;
+  } 
   .random-cocktail{
     display: flex;
     flex-flow: row wrap; 
