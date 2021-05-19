@@ -1,11 +1,29 @@
-.list-div{ 
+.shakenlist-div{ 
   display:flex; 
-  justify-content: center; 
+  justify-content: space-evenly; 
   width:100%; 
   background-color:#303036; 
-  height:auto;
+  height:100%;
 } 
-.listgroup{
-  width:60%; 
-  background-color: white;
+.shakenlist-group{
+  width:80%;  
+  height: auto;
+  background-color: white;  
+  margin-top: 100px;
+} 
+
+/* .cocktail-link{
+  /* border:2px black;  */
+  /* padding: 20px 
+ } */
+
+.cocktail-buttons{
+  margin: 20px;
+  padding: 5px; 
+  width:200px; 
+  height:100px;
+  border-radius: 10px;
+  border: 2px solid #E8BD21;
+  background-color: #00A37D;
+  color: #FFFFFF;
 }

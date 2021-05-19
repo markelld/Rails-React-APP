@@ -1,5 +1,5 @@
 import "./Shaken.css";
-import ListGroup from 'react-bootstrap/ListGroup'
+// import ListGroup from 'react-bootstrap/ListGroup'
 import { Link } from "react-router-dom";
 
 function Shaken(props) {
@@ -7,12 +7,12 @@ function Shaken(props) {
   const { shaken, setShaken } = props
   
   return (
-    <div className="list-div">
-      {shaken && <ListGroup className="listgroup">
+    <div className="shakenlist-div">
+      {shaken && <div className="shakenlist-group">
         {shaken.map((cocktail) => {
           return (<Link key={cocktail.id} to={`/cocktaildetails/${cocktail.id}`}>
-          <ListGroup.Item>{cocktail.name}</ListGroup.Item></Link>)
-    })}</ListGroup>}  
+          <button className="cocktail-buttons">{cocktail.name}</button></Link>)
+    })}</div>}  
     </div>
   )
 }

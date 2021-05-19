@@ -7,12 +7,15 @@ import Card from 'react-bootstrap/Card';
 
 
 function CocktailDetails(props) {
-  const { cocktailItem, setCocktailItem } = useState(null);
+  // const { cocktailItem, setCocktailItem } = useState(null);
   const { id } = useParams();
   const { currentUser, handleDelete, cocktails} = props;
   
+  // const cocktailMatch = (cocktails, id) => {
+    
+  // }
   const cocktail = cocktails.find(cocktail => cocktail.id == id)
-  console.log(cocktail)
+  // setCocktailItem(cocktail)
   // useEffect(() => {
   //   const fetchCocktailRecipe = async () => {
   //     const cocktailData = await getOneCocktail(id);
@@ -42,7 +45,7 @@ function CocktailDetails(props) {
             <Card.Text>
               {cocktail.build}
             </Card.Text>
-            <button onClick={() => handleDelete(cocktailItem.id)}
+            <button onClick={() => handleDelete(cocktail.id)}
               className="delete-button">delete</button>
                 <Link to={`/update/${cocktail.id}`}>
                   <button className="edit-button">edit</button>

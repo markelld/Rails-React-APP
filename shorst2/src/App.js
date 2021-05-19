@@ -141,9 +141,10 @@ function App() {
   // console.log(resultCocktail)
   // setRandomResults(resultCocktail)
 
-  const randomCocktail = (cocktails) => {
+  const randomCocktail = (cocktails,length) => {
     const resultCocktail = cocktails[Math.floor(Math.random() * cocktails.length)];
-    setRandomResults(resultCocktail) 
+    setRandomResults(resultCocktail)
+    console.log(resultCocktail)
   };
   
 
