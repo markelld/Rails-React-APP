@@ -1,5 +1,5 @@
 import "./Stirred.css";
-import ListGroup from "react-bootstrap/ListGroup";
+// import ListGroup from "react-bootstrap/ListGroup";
 import { Link } from "react-router-dom";
 
 function Stirred(props) {
@@ -7,12 +7,12 @@ function Stirred(props) {
   const { stirred, setStirred } = props;
   
   return (
-  <div className="list-div">
-    {stirred && <ListGroup className="listgroup">
+  <div className="stirredlist-div">
+    {stirred && <div className="stirredlist-group">
       {stirred.map((cocktail) => {
         return (<Link key={cocktail.id} to={`/cocktaildetails/${cocktail.id}`}>
-        <ListGroup.Item>{cocktail.name}</ListGroup.Item></Link>)
-    })}</ListGroup>}  
+        <button className="stirredcocktail_buttons">{cocktail.name}</button></Link>)
+    })}</div>}  
   </div>
   )
 }
