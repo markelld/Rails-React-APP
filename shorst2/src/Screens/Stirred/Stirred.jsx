@@ -11,7 +11,7 @@ function Stirred(props) {
     {stirred && <div className="stirredlist-group">
       {stirred.map((cocktail) => {
         return (<Link key={cocktail.id} to={`/cocktaildetails/${cocktail.id}`}>
-        <button className="stirredcocktail_buttons">{cocktail.name}</button></Link>)
+        <button className="stirredcocktail-buttons">{cocktail.name}</button></Link>)
     })}</div>}  
   </div>
   )

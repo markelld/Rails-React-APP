@@ -5,7 +5,7 @@
   align-items: center; 
   width: 100%; 
   height:100vh;  
-  background-color: #266DD3; 
+  background-color: #E8BD21; 
 } 
 /* #1b8885 */
 .signin-container{
@@ -22,7 +22,7 @@
   margin-top:50px; 
   padding: 8px;  
   border-radius: 5px;  
-  background-color: #266DD3; 
+  background-color: #E8BD21; 
   color:#FFFFFF; 
   font-weight: bold;
   border: 0 solid;
@@ -56,7 +56,7 @@
 }  */
 
 .register-link{
-  color:#266DD3; 
+  color:black; 
   margin-top: 25px; 
   font-weight: bold;
 } 
@@ -69,7 +69,7 @@
     align-items: center; 
     width: 100%; 
     height:100vh;  
-    background-color: #266DD3; 
+    background-color: #E8BD21; 
    
   }
   .signin-container{

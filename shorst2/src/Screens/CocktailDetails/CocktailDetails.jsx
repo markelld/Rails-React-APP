@@ -32,23 +32,23 @@ function CocktailDetails(props) {
       {/* <div className="recipe-div"> */}
         <Card  className="card" style={{ width: '22rem' }}>
           <Card.Body>
-            <Card.Title>
+            <Card.Title className="title">
               {cocktail.name}
             </Card.Title>
             <br/>
-            <Card.Subtitle className="mb-2 text-muted">Ingredients</Card.Subtitle>
-            <Card.Text>
+            <Card.Subtitle className="title-ingredient">Ingredients</Card.Subtitle>
+            <Card.Text className="ingredient-text">
               {cocktail.ingredients}
             </Card.Text>  
             <br/> 
-            <Card.Subtitle className="mb-2 text-muted">Build</Card.Subtitle>
-            <Card.Text>
+            <Card.Subtitle className="title-build">Build</Card.Subtitle>
+            <Card.Text className="build-text">
               {cocktail.build}
             </Card.Text>
             <button onClick={() => handleDelete(cocktail.id)}
-              className="delete-button">delete</button>
+              className="delete-button">Delete</button>
                 <Link to={`/update/${cocktail.id}`}>
-                  <button className="edit-button">edit</button>
+                  <button className="edit-button">Edit</button>
                 </Link>
           </Card.Body>
         </Card>
