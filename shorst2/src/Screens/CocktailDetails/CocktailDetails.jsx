@@ -45,11 +45,25 @@ function CocktailDetails(props) {
             <Card.Text className="build-text">
               {cocktail.build}
             </Card.Text>
-            <button onClick={() => handleDelete(cocktail.id)}
+          {cocktail &&
+            (currentUser.id === cocktail.user_id ? (
+            <div>
+
+            
+              <button onClick={() => handleDelete(cocktail.id)}
               className="delete-button">Delete</button>
                 <Link to={`/update/${cocktail.id}`}>
                   <button className="edit-button">Edit</button>
-                </Link>
+              </Link>
+              </div>
+            ): (
+            <></>
+            ))}
+            {/* <button onClick={() => handleDelete(cocktail.id)}
+              className="delete-button">Delete</button>
+                <Link to={`/update/${cocktail.id}`}>
+                  <button className="edit-button">Edit</button>
+                </Link> */}
           </Card.Body>
         </Card>
       {/* </div> */}
