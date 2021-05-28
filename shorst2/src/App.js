@@ -24,6 +24,9 @@ import Stirred from "./Screens/Stirred/Stirred";
 import CocktailDetails from "./Screens/CocktailDetails/CocktailDetails";
 import Update from "./Screens/Update/Update";
 import Contact from "./Screens/Contact/Contact";
+import Profile from "./Screens/Profile/Profile";
+
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -215,6 +218,15 @@ function App() {
         <Route exact path="/contact">
           <Layout currentUser={currentUser}>
             <Contact currentUser={currentUser} />
+          </Layout>
+        </Route>
+        <Route exact path="/profile">
+          <Layout currentUser={currentUser}> 
+            <Profile
+              cocktails={cocktails}
+              currentUser={currentUser}
+              handleDelete={handleDelete}
+            />
           </Layout>
         </Route>
       </Switch>

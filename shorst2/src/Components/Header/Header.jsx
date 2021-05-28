@@ -32,7 +32,10 @@ const Header = (props) => {
             <>
               <LinkContainer to="/post">
                 <Nav.Link>Post</Nav.Link>
-              </LinkContainer>          
+              </LinkContainer>
+              <LinkContainer to="/profile">
+                <Nav.Link>Profile</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/contact">
                 <Nav.Link>Contact</Nav.Link>
               </LinkContainer>
